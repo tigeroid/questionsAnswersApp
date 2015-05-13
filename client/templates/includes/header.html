@@ -1,0 +1,30 @@
+<template name="header">
+  <div id="topbar">
+      <div id="name">
+        <a href="{{pathFor 'postsList'}}">CoachBuddie Questions</a>
+      </div> <!-- name -->
+      <!-- <div class="social">
+        <ul class="clearfix">
+          <li><a class="social-facebook" href="https://www.facebook.com/pages/Coach-Buddie/1442806666013383" title="facebook">facebook</a></li>
+        </ul>
+      </div> --> <!--social-->
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="nav navbar-nav">
+          {{#if currentUser}}
+            <li>
+              <a href="{{pathFor 'postSubmit'}}">Submit Question</a>
+            </li>
+            <li class="dropdown">
+              {{> notifications}}
+            </li>
+          {{/if}}
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+    </div>
+  </div> <!-- topbar -->
+  <!-- <nav class="navbar navbar-default" role="navigation"> -->
+
+ <!--  </nav> -->
+</template>

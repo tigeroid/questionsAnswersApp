@@ -1,0 +1,17 @@
+<template name="postPage">
+  <div class="post-page page">
+    {{> postItem}}
+
+    <ul class="answers">
+    	{{#each answers}}
+    		{{> answerItem}}
+    	{{/each}}
+    </ul>
+
+    {{#if currentUser}}
+    	{{> answerSubmit}}
+    {{else}}
+    	<p>Please log in to provide an answer.</p>
+    {{/if}}
+  </div>
+</template>
